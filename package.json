@@ -1,0 +1,34 @@
+{
+  "name": "minimal-babel-starter",
+  "version": "1.0.0",
+  "description": "Get started writing ES6 with an understandable, minimal configuration.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AriaFallah/minimal-babel-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AriaFallah/minimal-babel-starter/issues"
+  },
+  "homepage": "https://github.com/AriaFallah/minimal-babel-starter#readme",
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-eslint": "^4.1.8",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^5.0.0",
+    "eslint-plugin-babel": "^3.1.0",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
