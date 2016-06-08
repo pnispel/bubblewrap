@@ -1,6 +1,7 @@
 'use strict'
 
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -9,10 +10,15 @@ module.exports = {
     './src/index'
   ],
   output: {
-    path: path.join(__dirname, 'static'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/'
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './static/index.html'
+    })
+  ],
   module: {
     loaders: [{
       test: /\.js$/,
@@ -21,7 +27,7 @@ module.exports = {
     }]
   },
   devServer: {
-    contentBase: './static',
+    contentBase: './dist',
     publicPath: '/'
   }
 }
