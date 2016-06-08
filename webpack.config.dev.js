@@ -1,22 +1,18 @@
-/* eslint no-var: 0 */
+'use strict'
 
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
 
 module.exports = {
-  devtool: 'cheap-eval-source-map',
+  devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/dev-server',
     './src/index'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'static'),
+    filename: 'bundle.js',
+    publicPath: '/'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   module: {
     loaders: [{
       test: /\.js$/,
@@ -25,7 +21,7 @@ module.exports = {
     }]
   },
   devServer: {
-    contentBase: './dist',
-    hot: true
+    contentBase: './static',
+    publicPath: '/'
   }
 }
