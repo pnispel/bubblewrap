@@ -1,6 +1,6 @@
 {
-  "name": "babel-starter",
-  "version": "2.0.0",
+  "name": "bubblewrap",
+  "version": "1.0.0",
   "description": ":rocket:",
   "main": "index.js",
   "scripts": {
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AriaFallah/minimal-babel-starter.git"
+    "url": "git+https://github.com/pnispel/bubblewrap.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AriaFallah/minimal-babel-starter/issues"
+    "url": "https://github.com/pnispel/bubblewrap/issues"
   },
-  "homepage": "https://github.com/AriaFallah/minimal-babel-starter#readme",
+  "homepage": "https://github.com/pnispel/bubblewrap",
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.9.1",
