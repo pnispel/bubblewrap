@@ -1,3 +1,3 @@
-// @flow
+import module from './module';
 
-console.log('hello world')
+export default module;

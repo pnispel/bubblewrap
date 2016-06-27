@@ -2,28 +2,31 @@
 
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const FlowStatusWebpackPlugin = require('flow-status-webpack-plugin')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    './src/index'
-  ],
+  entry: {
+    server: 'webpack-dev-server/client?http://localhost:8080',
+    lib: './src/index',
+    examples: './examples/index'
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: '/'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './static/index.html'
-    })
+      template: 'index.html'
+    }),
+    new FlowStatusWebpackPlugin()
   ],
   module: {
     loaders: [{
       test: /\.js$/,
       loaders: ['babel'],
-      include: path.join(__dirname, 'src')
+      exclude: /node_modules/,
     }]
   },
   devServer: {
